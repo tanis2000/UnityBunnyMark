@@ -6,11 +6,11 @@ using System.Collections.Generic;
 public class Game : MonoBehaviour {
 	
 	public List<Bunny> bunnies;	
-	public float gravity = 0.5f;
-	public int maxX = 0;
-	public int maxY = 0;
-	public int minX = 0;
-	public int minY = 0;
+	public static float gravity = 0.5f;
+	public static int maxX = 0;
+	public static int maxY = 0;
+	public static int minX = 0;
+	public static int minY = 0;
 	public Text fpsLabel;
 	public float updateInterval = 0.5f;
 	float accum = 0.0f; // FPS accumulated over the interval
@@ -37,7 +37,7 @@ public class Game : MonoBehaviour {
 		if (Input.touchCount > 0 || Input.anyKeyDown) {
 			addBunnies(1000);
 		}
-
+		/*
 		foreach (Bunny bunny in bunnies) {
 			bunny.posX += bunny.speedX;
 			bunny.posY += bunny.speedY;
@@ -68,7 +68,7 @@ public class Game : MonoBehaviour {
 			}
 			bunny.transform.position = new Vector2(bunny.posX, bunny.posY);
 		}
-
+		*/
 		timeleft -= Time.deltaTime;
 		accum += Time.timeScale/Time.deltaTime;
 		++frames;
