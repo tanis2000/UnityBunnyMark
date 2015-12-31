@@ -37,6 +37,10 @@ public class Game : MonoBehaviour {
 		if (Input.touchCount > 0 || Input.anyKeyDown) {
 			addBunnies(1000);
 		}
+
+		foreach (var bunny in bunnies) {
+			bunny.UpdateMe();
+		}
 		/*
 		foreach (Bunny bunny in bunnies) {
 			bunny.posX += bunny.speedX;

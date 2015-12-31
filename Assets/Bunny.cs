@@ -9,13 +9,8 @@ public class Bunny : MonoBehaviour {
 	public float speedY = 0;
 	private Vector2 newPos = new Vector2();
 	
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
-	void Update () {
+	public void UpdateMe () {
 		posX += speedX;
 		posY += speedY;
 		speedY += Game.gravity;
